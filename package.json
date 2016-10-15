@@ -1,0 +1,14 @@
+{
+  "name": "qtk-paritcle-templates-generator",
+  "version": "1.0.0",
+  "description": "qtk-paritcle-templates-generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Li XianJing<xianjimli@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "plist": "^2.0.1"
+  }
+}
