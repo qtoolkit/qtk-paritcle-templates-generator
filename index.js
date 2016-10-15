@@ -270,26 +270,6 @@ function genStartColor(json) {
 		};
 		out.push(item);
 	}
-	if(json.startParticleSize !== undefined){
-		item = {
-			type:"number", 
-			name:"startParticleSize", 
-			converter:"color", 
-			path:"startParticleSize", 
-			value:json.startParticleSize
-		};
-		out.push(item);
-	}
-	if(json.startParticleSizeVariance !== undefined){
-		item = {
-			type:"number", 
-			name:"startParticleSizeVariance", 
-			converter:"color", 
-			path:"startParticleSizeVariance", 
-			value:json.startParticleSizeVariance
-		};
-		out.push(item);
-	}
 
 	return out;
 };
@@ -386,6 +366,17 @@ function genFinishColor(json) {
 function genRange(json) {
 	var out = [];
 	var item = null;
+	
+	if(json.angle !== undefined){
+		item = {
+			type:"range", 
+			name:"startParticleSize", 
+			converter:"startParticleSize", 
+			path:"startParticleSize", 
+			value:{first:json.startParticleSize, second:json.startParticleSizeVariance}
+		};
+		out.push(item);
+	}
 
 	if(json.angle !== undefined){
 		item = {
